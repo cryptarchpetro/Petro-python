@@ -1,0 +1,9 @@
+import time
+
+def animate_bober_kurwa():
+    frames = ["Bober", "Kurwa", "Forever", "Unstoppable"]
+    for frame in frames:
+        print(f"\r{frame}", end="")
+        time.sleep(1)
+
+animate_bober_kurwa()
