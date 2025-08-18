@@ -21,5 +21,15 @@ def train_model():
     print("Confusion Matrix:\n", confusion_matrix(y_test, predictions))
     print("Classification Report:\n", classification_report(y_test, predictions))
 
+def train_custom_model(dataset_path):
+    data = pd.read_csv(dataset_path)
+    X = data.iloc[:, :-1]
+    y = data.iloc[:, -1]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    model = RandomForestClassifier()
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    accuracy = accuracy_score(y_test, predictions)
+    print(f"Model accuracy: {accuracy * 100:.2f}%")
 # Example usage
 train_model()
