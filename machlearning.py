@@ -1,5 +1,3 @@
-### **Repository 12: Machine Learning Model**
-```python
 # Repository: python-ml-model
 # Description: Train a simple machine learning model using scikit-learn.
 
